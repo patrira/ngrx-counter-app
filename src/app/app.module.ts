@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 import { counterReducer } from './counter/state/counter.reducer';
 import { CounterModule } from './counter/counter.module';
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent ],
   imports: [
     BrowserModule,
     CounterModule,
     RouterModule,
+    AppRoutingModule,
     StoreModule.forRoot(counterReducer),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
