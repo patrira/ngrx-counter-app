@@ -2,42 +2,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height for vertical centering */
+    height: 100vh;
   }
   
   .card {
-    background-color: #ffffff; /* White background for the card */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced box shadow */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    padding: 2rem; /* Adjust padding as needed */
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
   }
   
   h1 {
     font-size: 2rem;
     color: #333;
-    margin-bottom: 1rem; /* Adjust spacing as needed */
+    margin-bottom: 1rem;
   }
   
   h2 {
     font-size: 1.5rem;
     color: #555;
-    margin-bottom: 1.5rem; /* Adjust spacing as needed */
+    margin-bottom: 1.5rem;
   }
   
   .btn {
-    font-size: 1.1rem; /* Increased font size */
-    padding: 0.75rem 1.5rem; /* Increased padding for button size */
-    margin: 0.5rem; /* Margin to separate buttons */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for background color and scale */
-    border-radius: 5px; /* Rounded button corners */
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 5px;
   }
   
   .btn-primary {
-    background-color: #007bff; /* Blue */
+    background-color: #007bff;
     border: none;
   }
   
@@ -46,7 +46,7 @@
   }
   
   .btn-warning {
-    background-color: #ffc107; /* Orange */
+    background-color: #ffc107;
     border: none;
   }
   
@@ -55,7 +55,7 @@
   }
   
   .btn-info {
-    background-color: #17a2b8; /* Cyan */
+    background-color: #17a2b8;
     border: none;
   }
   
@@ -64,7 +64,7 @@
   }
   
   .btn-success {
-    background-color: #28a745; /* Green */
+    background-color: #28a745;
     border: none;
   }
   
@@ -72,21 +72,33 @@
     background-color: #218838;
   }
   
-  .increment-by .input-group {
+  .increment-by, .decrement-by {
     margin-top: 20px;
+  }
+  
+  .increment-by .input-group, .decrement-by .input-group {
     display: flex;
     align-items: center;
   }
   
-  .increment-by .form-control {
-    font-size: 1.1rem; /* Match font size of buttons */
-    padding: 0.75rem 1.5rem; /* Match padding of buttons */
-    margin-right: 1rem; /* Space between input and button */
-    border-radius: 5px; /* Rounded corners */
-    border: 1px solid #ced4da; /* Border color to match button borders */
+  .increment-by .form-control, .decrement-by .form-control {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
   }
   
-  .increment-by .btn-success {
-    margin-left: 0.5rem; /* Margin to separate the button from the input */
+  .increment-by .btn-success, .decrement-by .btn-danger {
+    margin-left: 0.5rem;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border: none;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
   }
   

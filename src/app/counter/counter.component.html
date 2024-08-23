@@ -16,5 +16,12 @@
         <button class="btn btn-success" (click)="incrementBy(inputValue.valueAsNumber)">Increment By</button>
       </div>
     </div>
+
+    <div class="decrement-by">
+      <div class="input-group">
+        <input #decrementValue type="number" class="form-control" placeholder="Decrement By">
+        <button class="btn btn-danger" (click)="decrementBy(decrementValue.valueAsNumber)">Decrement By</button>
+      </div>
+    </div>
   </div>
 </div>

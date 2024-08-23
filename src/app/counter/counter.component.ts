@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as CounterActions from './state/counter.actions';
@@ -9,8 +8,8 @@ import * as CounterActions from './state/counter.actions';
   styleUrls: ['./counter.component.css'],
 })
 export class CounterComponent {
-  count$ ;
-  
+  count$;
+
   constructor(private store: Store<{ count: number }>) {
     this.count$ = this.store.select('count');
   }
@@ -29,5 +28,9 @@ export class CounterComponent {
 
   incrementBy(value: number) {
     this.store.dispatch(CounterActions.incrementBy({ value }));
+  }
+
+  decrementBy(value: number) {
+    this.store.dispatch(CounterActions.decrementBy({ value }));
   }
 }
