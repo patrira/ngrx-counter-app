@@ -1,1 +1,13 @@
-<p>counter works!</p>
+
+<div class="counter-container">
+    <h1>Counter: {{ count$ | async }}</h1>
+    <button (click)="increment()">Increment</button>
+    <button (click)="decrement()">Decrement</button>
+    <button (click)="reset()">Reset</button>
+    
+    <div class="increment-by">
+      <input #inputValue type="number" placeholder="Increment By">
+      <button (click)="incrementBy(inputValue.valueAsNumber)">Increment By</button>
+    </div>
+  </div>
+  
