@@ -7,3 +7,4 @@ export const incrementBy = createAction('[Counter] Increment By', props<{ value:
 export const decrementBy = createAction('[Counter] Decrement By', props<{ value: number }>());
 export const setTo = createAction('[Counter] Set To', props<{ value: number }>());
 export const multiplyBy = createAction('[Counter] Multiply By', props<{ value: number }>());
+export const undo = createAction('[Counter] Undo');

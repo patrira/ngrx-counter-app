@@ -1,15 +1,60 @@
+// src/app/counter/state/counter.reducer.ts
 import { createReducer, on } from '@ngrx/store';
-import { increment, decrement, reset, incrementBy, decrementBy, setTo, multiplyBy } from './counter.actions';
+import * as CounterActions from './counter.actions';
 
-export const initialState = 0;
+export interface CounterState {
+  count: number;
+  history: number[]; // To keep track of the history for undo
+}
+
+export const initialState: CounterState = {
+  count: 0,
+  history: []
+};
 
 export const counterReducer = createReducer(
   initialState,
-  on(increment, (state) => state + 1),
-  on(decrement, (state) => state - 1),
-  on(reset, () => initialState),
-  on(incrementBy, (state, { value }) => state + value),
-  on(decrementBy, (state, { value }) => state - value),
-  on(setTo, (state, { value }) => value),
-  on(multiplyBy, (state, { value }) => state * value)
+  on(CounterActions.increment, (state) => ({
+    ...state,
+    history: [...state.history, state.count],
+    count: state.count + 1
+  })),
+  on(CounterActions.decrement, (state) => ({
+    ...state,
+    history: [...state.history, state.count],
+    count: state.count - 1
+  })),
+  on(CounterActions.reset, (state) => ({
+    ...state,
+    history: [...state.history, state.count],
+    count: 0
+  })),
+  on(CounterActions.incrementBy, (state, { value }) => ({
+    ...state,
+    history: [...state.history, state.count],
+    count: state.count + value
+  })),
+  on(CounterActions.decrementBy, (state, { value }) => ({
+    ...state,
+    history: [...state.history, state.count],
+    count: state.count - value
+  })),
+  on(CounterActions.setTo, (state, { value }) => ({
+    ...state,
+    history: [...state.history, state.count],
+    count: value
+  })),
+  on(CounterActions.multiplyBy, (state, { value }) => ({
+    ...state,
+    history: [...state.history, state.count],
+    count: state.count * value
+  })),
+  on(CounterActions.undo, (state) => {
+    const previousState = state.history[state.history.length - 1];
+    return {
+      ...state,
+      history: state.history.slice(0, -1),
+      count: previousState !== undefined ? previousState : state.count
+    };
+  })
 );

@@ -1,3 +1,4 @@
+
 <div class="container mt-5">
   <div class="card p-4 shadow">
     <h1 class="text-center mb-4">Ngrx Counter App Using Actions and Reducers</h1>
@@ -8,6 +9,7 @@
       <button class="btn btn-primary me-2" (click)="increment()">Increment</button>
       <button class="btn btn-warning me-2" (click)="decrement()">Decrement</button>
       <button class="btn btn-info" (click)="reset()">Reset</button>
+      <button class="btn btn-secondary me-2" (click)="undo()">Undo</button>
     </div>
 
     <div class="increment-by">
@@ -19,8 +21,8 @@
 
     <div class="decrement-by">
       <div class="input-group">
-        <input #decrementValue type="number" class="form-control" placeholder="Decrement By">
-        <button class="btn btn-danger" (click)="decrementBy(decrementValue.valueAsNumber)">Decrement By</button>
+        <input #inputValue type="number" class="form-control" placeholder="Decrement By">
+        <button class="btn btn-danger" (click)="decrementBy(inputValue.valueAsNumber)">Decrement By</button>
       </div>
     </div>
   </div>

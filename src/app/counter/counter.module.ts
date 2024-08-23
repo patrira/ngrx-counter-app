@@ -1,4 +1,4 @@
-// src/app/counter/counter.module.ts
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CounterComponent } from './counter.component';
