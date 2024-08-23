@@ -1,13 +1,20 @@
-
-<div class="counter-container">
-    <h1>Counter: {{ count$ | async }}</h1>
-    <button (click)="increment()">Increment</button>
-    <button (click)="decrement()">Decrement</button>
-    <button (click)="reset()">Reset</button>
+<div class="container mt-5">
+  <div class="card p-4 shadow">
+    <h1 class="text-center mb-4">Ngrx Counter App Using Actions and Reducers</h1>
     
+    <h2 class="text-center mb-4">Counter: {{ count$ | async }}</h2>
+
+    <div class="d-flex justify-content-center mb-3">
+      <button class="btn btn-primary me-2" (click)="increment()">Increment</button>
+      <button class="btn btn-warning me-2" (click)="decrement()">Decrement</button>
+      <button class="btn btn-info" (click)="reset()">Reset</button>
+    </div>
+
     <div class="increment-by">
-      <input #inputValue type="number" placeholder="Increment By">
-      <button (click)="incrementBy(inputValue.valueAsNumber)">Increment By</button>
+      <div class="input-group">
+        <input #inputValue type="number" class="form-control" placeholder="Increment By">
+        <button class="btn btn-success" (click)="incrementBy(inputValue.valueAsNumber)">Increment By</button>
+      </div>
     </div>
   </div>
-  
+</div>

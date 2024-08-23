@@ -1,25 +1,92 @@
-
-.counter-container {
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for vertical centering */
+  }
+  
+  .card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced box shadow */
     display: flex;
     flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 2rem; /* Adjust padding as needed */
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem; /* Adjust spacing as needed */
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1.5rem; /* Adjust spacing as needed */
+  }
+  
+  .btn {
+    font-size: 1.1rem; /* Increased font size */
+    padding: 0.75rem 1.5rem; /* Increased padding for button size */
+    margin: 0.5rem; /* Margin to separate buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for background color and scale */
+    border-radius: 5px; /* Rounded button corners */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Blue */
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-warning {
+    background-color: #ffc107; /* Orange */
+    border: none;
+  }
+  
+  .btn-warning:hover {
+    background-color: #e0a800;
+  }
+  
+  .btn-info {
+    background-color: #17a2b8; /* Cyan */
+    border: none;
+  }
+  
+  .btn-info:hover {
+    background-color: #138496;
+  }
+  
+  .btn-success {
+    background-color: #28a745; /* Green */
+    border: none;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838;
+  }
+  
+  .increment-by .input-group {
+    margin-top: 20px;
+    display: flex;
     align-items: center;
-    margin-top: 20px;
   }
   
-  button {
-    margin: 5px;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
+  .increment-by .form-control {
+    font-size: 1.1rem; /* Match font size of buttons */
+    padding: 0.75rem 1.5rem; /* Match padding of buttons */
+    margin-right: 1rem; /* Space between input and button */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ced4da; /* Border color to match button borders */
   }
   
-  .increment-by {
-    margin-top: 20px;
-  }
-  
-  .increment-by input {
-    margin-right: 10px;
-    padding: 5px;
-    font-size: 14px;
+  .increment-by .btn-success {
+    margin-left: 0.5rem; /* Margin to separate the button from the input */
   }
   
